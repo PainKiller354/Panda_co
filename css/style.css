@@ -56,13 +56,17 @@ header nav .container-fluid .collapse .dropdown-recall:hover .recall-form {
   display: block;
 }
 
+header nav .container-fluid .collapse .dropdown-recall .dropbtn {
+  cursor: pointer;
+}
+
 header nav .container-fluid .collapse .dropdown-recall .recall-form {
   display: none;
   position: absolute;
-  right: -25px;
+  right: -40px;
   border-radius: 10px;
   background-color: white;
-  min-width: 220px;
+  min-width: 250px;
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
   z-index: 1;
@@ -75,7 +79,7 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form a {
   -webkit-animation: gradient 3s ease infinite;
           animation: gradient 3s ease infinite;
   color: #000000;
-  padding: 13px 32px;
+  padding: 13px 32px 12px 32px;
   border-radius: 25px;
   border: none;
 }
@@ -87,10 +91,6 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form a:hover {
 
 header nav .container-fluid .collapse .dropdown-recall .recall-form a:before {
   display: none;
-}
-
-header nav .container-fluid .collapse .dropdown-recall .dropbtn {
-  cursor: pointer;
 }
 
 header nav .container-fluid .collapse ul li a {
@@ -186,6 +186,23 @@ header nav .container-fluid .collapse ul li ul li:nth-child(3) a:hover {
   background-position: center;
 }
 
+header .offcanvas .offcanvas-body button {
+  background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
+  background: linear-gradient(-45deg, #ffe906, #16b7ff);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 3s ease infinite;
+          animation: gradient 3s ease infinite;
+  color: #000000;
+  padding: 13px 32px;
+  border-radius: 25px;
+  border: none;
+}
+
+header .offcanvas .offcanvas-body button:hover {
+  border: 0;
+  color: white;
+}
+
 .about-us {
   height: 100vh;
   background-color: #fafafa;
@@ -212,7 +229,7 @@ header nav .container-fluid .collapse ul li ul li:nth-child(3) a:hover {
   font-family: "Mazzard Soft M", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  padding: 14px 40px 14px 40px;
+  padding: 16px 40px 14px 40px;
   background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
   background: linear-gradient(-45deg, #ffe906, #16b7ff);
   background-size: 200% 200%;
@@ -262,11 +279,19 @@ header nav .container-fluid .collapse ul li ul li:nth-child(3) a:hover {
 }
 
 .projects h2 {
-  text-shadow: 0.07em 0.07em 0.07em rgb(45, 45, 45);
+  font-family: "ICTV", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
 }
 
 .projects .projects-card {
   border-radius: 100px 170px 50px 295px;
+}
+
+.projects .projects-card h3 {
+  font-family: "ICTV", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .projects .projects-card__img {
