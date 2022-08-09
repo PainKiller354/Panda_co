@@ -33,7 +33,6 @@
   --dark_gray: #787878;
   --light_blue: #c4e4ec;
   --blue: #16b7ff;
-<<<<<<< HEAD
   --yellow: #ffe906;
   --orange: rgba(255, 170, 0, 0.55);
   --bg_overlay: rgba(0, 0, 0, 0.4);
@@ -145,10 +144,6 @@ header #overlay .spinner {
 
 header #overlay .is-hide {
   display: none;
-=======
-  --bg_gray: var(--light_gray);
-  --ukr_gradient: linear-gradient(-45deg, #ffe906, #16b7ff);
->>>>>>> 48705d20966db06399ee69b82e12d57d91d143b3
 }
 
 header nav .container-fluid {
@@ -427,8 +422,9 @@ header .offcanvas .offcanvas-body button:hover {
 }
 
 .projects .projects-card__img a img {
-  -o-object-fit: none;
-     object-fit: none;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .humanitarian-aid {
@@ -449,7 +445,6 @@ header .offcanvas .offcanvas-body button:hover {
   font-family: "Mazzard Soft", sans-serif;
   font-weight: 500;
   font-size: 24px;
-<<<<<<< HEAD
 }
 
 .credentials {
@@ -496,8 +491,26 @@ header .offcanvas .offcanvas-body button:hover {
 
 .credentials a:hover {
   color: var(--black);
-=======
->>>>>>> 48705d20966db06399ee69b82e12d57d91d143b3
+}
+
+.partners {
+  background: var(--light_gray);
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.partners h2 {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.partners p {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--black);
 }
 
 footer {
@@ -583,7 +596,6 @@ footer .container .h_black:hover p {
 
 .agreement ul a:hover {
   color: var(--blue);
-<<<<<<< HEAD
 }
 
 /*-------requisites-------*/
@@ -621,11 +633,15 @@ footer .container .h_black:hover p {
   font-family: "Mazzard Soft", sans-serif;
   font-weight: 500;
   font-size: 18px;
-=======
->>>>>>> 48705d20966db06399ee69b82e12d57d91d143b3
 }
 
 @media (hover) {
+  .projects .projects-card {
+    -webkit-transition: 1000ms;
+    -o-transition: 1000ms;
+    transition: 1000ms;
+  }
+
   .projects .projects-card:hover,
   .projects .projects-card:focus-within {
     border-radius: 32px;
@@ -649,9 +665,9 @@ footer .container .h_black:hover p {
 
   .projects .projects-card__img {
     border-radius: 120px 550px 100px 550px;
-    -webkit-transition: 500ms;
-    -o-transition: 500ms;
-    transition: 500ms;
+    -webkit-transition: 1000ms;
+    -o-transition: 1000ms;
+    transition: 1000ms;
   }
 }
 

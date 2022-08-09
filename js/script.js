@@ -12,17 +12,13 @@ testWebP(function (support) {
     }
 });
 
-<<<<<<< HEAD
 /*--------click_for_copy---------*/
-=======
->>>>>>> 48705d20966db06399ee69b82e12d57d91d143b3
 function copytext(el) {
     var $tmp = $("<textarea>");
     $("body").append($tmp);
     $tmp.val($(el).text()).select();
     document.execCommand("copy");
     $tmp.remove();
-<<<<<<< HEAD
 }
 
 /*--------up_button---------*/
@@ -60,6 +56,3 @@ jQuery(function($){
         });
     });
 });
-=======
-}
->>>>>>> 48705d20966db06399ee69b82e12d57d91d143b3
