@@ -1,34 +1,45 @@
 @font-face {
-  font-family: "Mazzard Soft M";
+  font-family: "Mazzard Soft";
+  src: local("MazzardSoftM-Bold"), url("../fonts/MazzardSoftM-Bold.woff") format("woff"), url("../fonts/MazzardSoftM-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mazzard Soft";
+  src: local("MazzardSoftM-Medium"), url("../fonts/MazzardSoftM-Medium.woff") format("woff"), url("../fonts/MazzardSoftM-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mazzard Soft";
+  src: local("MazzardSoftM-Regular"), url("../fonts/MazzardSoftM-Regular.woff") format("woff"), url("../fonts/MazzardSoftM-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mazzard Soft";
   src: local("MazzardSoftM-Light"), url("../fonts/MazzardSoftM-Light.woff") format("woff"), url("../fonts/MazzardSoftM-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "ICTV";
-  src: local("ICTV-Bold"), url("../fonts/ICTV-Bold.woff") format("woff"), url("../fonts/ICTV-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ICTV";
-  src: local("ICTV-Regular"), url("../fonts/ICTV-Regular.woff") format("woff"), url("../fonts/ICTV-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ICTV";
-  src: local("ICTV-Thin"), url("../fonts/ICTV-Thin.woff") format("woff"), url("../fonts/ICTV-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
+:root {
+  --white: #ffff;
+  --black: #000;
+  --light_gray: #fafafa;
+  --dark_gray: #787878;
+  --light_blue: #c4e4ec;
+  --blue: #16b7ff;
+  --bg_gray: var(--light_gray);
+  --ukr_gradient: linear-gradient(-45deg, #ffe906, #16b7ff);
 }
 
 header nav .container-fluid {
   z-index: 10;
-  background-color: #fafafa;
+  background-color: var(--light_gray);
   top: 0;
 }
 
@@ -36,15 +47,15 @@ header nav .container-fluid .logo a {
   border-radius: 50%;
 }
 
-header nav .container-fluid .logo a a:hover {
-  -webkit-box-shadow: 0 0 10px 10px rgba(149, 219, 254, 0.8803921569);
-          box-shadow: 0 0 10px 10px rgba(149, 219, 254, 0.8803921569);
-}
-
 header nav .container-fluid .logo a img {
   -webkit-box-shadow: 0 0 2px 2px #95dbfe;
           box-shadow: 0 0 2px 2px #95dbfe;
   border-radius: 50%;
+}
+
+header nav .container-fluid .logo a img:hover {
+  -webkit-box-shadow: 0 0 4px 4px #95dbfe;
+          box-shadow: 0 0 4px 4px #95dbfe;
 }
 
 header nav .container-fluid .collapse .dropdown-recall {
@@ -65,7 +76,7 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form {
   position: absolute;
   right: -40px;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--white);
   min-width: 250px;
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
@@ -73,12 +84,11 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form {
 }
 
 header nav .container-fluid .collapse .dropdown-recall .recall-form a {
-  background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
-  background: linear-gradient(-45deg, #ffe906, #16b7ff);
+  background: var(--ukr_gradient);
   background-size: 200% 200%;
   -webkit-animation: gradient 3s ease infinite;
           animation: gradient 3s ease infinite;
-  color: #000000;
+  color: var(--black);
   padding: 13px 32px 12px 32px;
   border-radius: 25px;
   border: none;
@@ -86,7 +96,7 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form a {
 
 header nav .container-fluid .collapse .dropdown-recall .recall-form a:hover {
   border: 0;
-  color: white;
+  color: var(--white);
 }
 
 header nav .container-fluid .collapse .dropdown-recall .recall-form a:before {
@@ -94,14 +104,14 @@ header nav .container-fluid .collapse .dropdown-recall .recall-form a:before {
 }
 
 header nav .container-fluid .collapse ul li a {
-  font-family: "Mazzard Soft M", sans-serif;
+  font-family: "Mazzard Soft", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   position: relative;
   padding: 3px 3px 3px 3px;
   margin: 0 5px;
-  color: #585858;
+  color: var(--dark_gray);
 }
 
 header nav .container-fluid .collapse ul li a:before {
@@ -113,7 +123,7 @@ header nav .container-fluid .collapse ul li a:before {
   bottom: 0;
   left: 0;
   height: 4px;
-  background: #c4e4ec;
+  background: var(--light_blue);
   background-size: 100%;
   z-index: -1;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -139,11 +149,11 @@ header nav .container-fluid .collapse ul li a:hover::before {
 }
 
 header nav .container-fluid .collapse ul li a:hover {
-  color: #000000;
+  color: var(--black);
 }
 
 header nav .container-fluid .collapse ul li ul {
-  background-color: white;
+  background-color: var(--white);
   min-width: 75px;
   -webkit-filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
@@ -187,12 +197,11 @@ header nav .container-fluid .collapse ul li ul li:nth-child(3) a:hover {
 }
 
 header .offcanvas .offcanvas-body button {
-  background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
-  background: linear-gradient(-45deg, #ffe906, #16b7ff);
+  background: var(--ukr_gradient);
   background-size: 200% 200%;
   -webkit-animation: gradient 3s ease infinite;
           animation: gradient 3s ease infinite;
-  color: #000000;
+  color: var(--black);
   padding: 13px 32px;
   border-radius: 25px;
   border: none;
@@ -200,12 +209,12 @@ header .offcanvas .offcanvas-body button {
 
 header .offcanvas .offcanvas-body button:hover {
   border: 0;
-  color: white;
+  color: var(--white);
 }
 
 .about-us {
   height: 100vh;
-  background-color: #fafafa;
+  background-color: var(--bg_gray);
 }
 
 .about-us .about-us__text {
@@ -213,36 +222,34 @@ header .offcanvas .offcanvas-body button:hover {
 }
 
 .about-us .about-us__text h1 {
-  font-family: "Mazzard Soft M", sans-serif;
+  font-family: "Mazzard Soft", sans-serif;
   font-weight: 700;
   font-size: 40px;
 }
 
 .about-us .about-us__text p {
-  font-family: "Mazzard Soft M", sans-serif;
+  font-family: "Mazzard Soft", sans-serif;
   font-weight: 500;
   font-size: 26px;
   margin-bottom: 80px;
 }
 
 .about-us .about-us__text a {
-  font-family: "Mazzard Soft M", sans-serif;
-  font-weight: 600;
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   padding: 16px 40px 14px 40px;
-  background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
-  background: linear-gradient(-45deg, #ffe906, #16b7ff);
+  background: var(--ukr_gradient);
   background-size: 200% 200%;
   border-radius: 100px 100px 100px 100px;
 }
 
 .about-us .about-us__text a:hover {
-  background: -o-linear-gradient(135deg, #ffe906, #16b7ff);
-  background: linear-gradient(-45deg, #ffe906, #16b7ff);
+  background: var(--ukr_gradient);
   background-size: 400% 400%;
   -webkit-animation: gradient 3s ease infinite;
           animation: gradient 3s ease infinite;
-  color: white;
+  color: var(--white);
 }
 
 @-webkit-keyframes gradient {
@@ -275,27 +282,27 @@ header .offcanvas .offcanvas-body button:hover {
 
 .projects {
   padding: 80px 0;
-  background-color: #c4e4ec;
+  background-color: var(--light_blue);
 }
 
 .projects h2 {
-  font-family: "ICTV", sans-serif;
-  font-weight: 600;
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 700;
   font-size: 36px;
 }
 
 .projects .projects-card {
-  border-radius: 100px 170px 50px 295px;
+  border-radius: 100px 170px 50px 330px;
 }
 
 .projects .projects-card h3 {
-  font-family: "ICTV", sans-serif;
-  font-weight: 600;
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
   font-size: 24px;
 }
 
 .projects .projects-card__img {
-  height: 350px;
+  height: 390px;
   border-radius: 120px 550px 100px 550px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -303,8 +310,6 @@ header .offcanvas .offcanvas-body button:hover {
   -webkit-transition: 300ms ease-in-out;
   -o-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
-  -o-object-fit: none;
-     object-fit: none;
 }
 
 .projects .projects-card__img a img {
@@ -313,7 +318,7 @@ header .offcanvas .offcanvas-body button:hover {
 }
 
 .humanitarian-aid {
-  background-color: #FFFFFF;
+  background-color: var(--white);
 }
 
 .humanitarian-aid__text {
@@ -321,19 +326,80 @@ header .offcanvas .offcanvas-body button:hover {
 }
 
 .humanitarian-aid__text h2 {
-  font-size: 40px;
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
 }
 
 .humanitarian-aid__text p {
-  font-size: 26px;
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 footer {
-  background-color: #c4e4ec;
+  background-color: var(--light_blue);
 }
+
+footer .container .logo {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+footer .container .logo a {
+  border-radius: 50%;
+}
+
+footer .container .logo a img {
+  -webkit-box-shadow: 0 0 3px 3px #95dbfe;
+          box-shadow: 0 0 3px 3px #95dbfe;
+  border-radius: 50%;
+}
+
+footer .container .logo a img:hover {
+  -webkit-box-shadow: 0 0 6px 6px white;
+          box-shadow: 0 0 6px 6px white;
+}
+
+footer .container h5 {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+footer .container a,
+footer .container p {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--dark_gray);
+}
+
+footer .container a:hover,
+footer .container p:hover {
+  color: var(--black);
+}
+
+footer .container .h_black:hover p {
+  color: var(--black);
+}
+
+/*-------agreement-------*/
 
 .agreement {
   padding-top: 100px;
+}
+
+.agreement h2 {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.agreement p {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .agreement ul {
@@ -341,13 +407,19 @@ footer {
   --bs-list-group-item-padding-y: 0.5rem;
 }
 
+.agreement ul li {
+  font-family: "Mazzard Soft", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
 .agreement ul a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 .agreement ul a:hover {
-  color: #16b7ff;
+  color: var(--blue);
 }
 
 @media (hover) {
