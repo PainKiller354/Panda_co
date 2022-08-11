@@ -1,0 +1,33 @@
+@media only screen and (max-width: 992px) {
+  header .dropdown-recall .recall-form {
+    top: -310px;
+    right: calc(50% - 122px) !important;
+  }
+
+  header #button.show {
+    visibility: hidden;
+  }
+
+  .about-us .about-us__text p {
+    margin-bottom: 40px;
+  }
+
+  .projects {
+    padding: 40px 0;
+  }
+
+  .projects .projects-card {
+    border-radius: 32px;
+  }
+
+  .projects .projects-card .projects-card__img {
+    border-radius: 32px;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+
+  .credentials {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
