@@ -449,14 +449,20 @@ header .offcanvas .offcanvas-body button:hover {
 
 .credentials {
   padding-top: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 140px;
   background-color: var(--light_blue);
+}
+
+.credentials .credentials__img {
+  max-width: 90px;
+  margin-bottom: 20px;
 }
 
 .credentials h3 {
   font-family: "Mazzard Soft", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
 .credentials .btn {
@@ -506,6 +512,35 @@ header .offcanvas .offcanvas-body button:hover {
   margin-bottom: 40px;
 }
 
+.partners .partners__img {
+  max-width: 300px;
+  max-height: 370px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.partners .partners__img:hover,
+.partners .partners__img:focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+          box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.partners .partners__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .partners p {
   font-family: "Mazzard Soft", sans-serif;
   font-weight: 500;
@@ -551,8 +586,7 @@ footer .container p {
   color: var(--dark_gray);
 }
 
-footer .container a:hover,
-footer .container p:hover {
+footer .container a:hover {
   color: var(--black);
 }
 
